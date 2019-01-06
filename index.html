@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hello Webpack</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="generate">
+      <input id="new-game-button" type="submit" value="New Game" />
+      or Reveal Code:
+      <input type="text" id="seed"/>
+      <input id="load-button" type="submit" value="Load"/>
+      &nbsp;
+      <input id="reveal-button" type="submit" value="Reveal"/>
+
+    </div>
+
+    <div id="info">
+      <ul>
+        <li>TURN: <span id="turn"></span></li>
+        <li>BLUE AGENTS: <span id="blue-agents"></span></li>
+        <li>RED AGENTS: <span id="red-agents"></span></li>
+      </ul>
+    </div>
+
+    <br/>
+
+    <div id="board">
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
