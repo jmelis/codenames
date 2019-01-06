@@ -33,13 +33,25 @@ var setScore = function () {
 }
 
 var renderGame = function (g) {
-    $("#board").empty();
+    var content = "<table>";
     for (var i=0; i<25; i++) {
-        $("#board").append(cardTemplate({
+        if (i % 5 == 0)
+            content += '<tr>';
+
+        content += '<td>';
+        content += cardTemplate({
             word: g.words[i],
             cardType: offPrefix + g.cells[i],
-        }));
+        });
+        content += '</td>';
+
+        if ((i+1) % 5 == 0)
+            content += "</tr>";
     }
+    content += "</table>";
+
+    $("#board").empty();
+    $("#board").append(content);
 };
 
 var setTurn = function (turn) {
@@ -95,6 +107,14 @@ var revealCard = function (card) {
 };
 
 $(document).ready(function () {
+
+    var code = genCode();
+    $("#seed").val(code);
+    initBoard(code);
+
+    $("#info").show();
+    $("#board").show();
+
     $("#new-game-button").click(function() {
         var code = genCode();
         $("#seed").val(code);
