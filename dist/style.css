@@ -1,0 +1,49 @@
+#info, #board, #reveal {
+    display: none;
+}
+
+#turn {
+    text-transform: uppercase;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(5, 19%);
+  grid-gap: 20px 1.25%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: 5px;
+  /* border: 1px solid black; */
+  padding: 20px;
+  font-size: 150%;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #F8E7CB;
+  height: 75px;
+}
+
+.word {
+    padding: 5px 0 5px 0;
+    background-color: #ffffff;
+}
+
+.blue {
+    background-color: #1080B2;
+}
+
+.red {
+    background-color: #E20720;
+}
+
+.bystander {
+    background-color: #AA8A70;
+}
+
+.assassin {
+    background-color: black;
+}
