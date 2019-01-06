@@ -6,28 +6,25 @@
     text-transform: uppercase;
 }
 
-#board {
-  display: grid;
-  grid-template-columns: repeat(5, 19%);
-  grid-gap: 20px 1.25%;
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+table td {
+    padding: 0.3rem;
+    text-align: center;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  border-radius: 5px;
-  /* border: 1px solid black; */
-  padding: 20px;
-  font-size: 150%;
-  text-align: center;
+  border-radius: 0.5rem;
+  padding: 1rem;
   text-transform: uppercase;
   background-color: #F8E7CB;
-  height: 75px;
 }
 
 .word {
+    font-size: 1rem;
     padding: 5px 0 5px 0;
     background-color: #ffffff;
 }
